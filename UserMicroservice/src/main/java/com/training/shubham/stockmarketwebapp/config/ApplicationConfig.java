@@ -12,4 +12,16 @@ public class ApplicationConfig {
 		ModelMapper modelMapper = new ModelMapper();
 		return modelMapper;
 	}
+	
+	@Bean
+	public MyUserDetailsService myUserDetailsService() {
+		MyUserDetailsService myUserDetailsService = new MyUserDetailsService();
+		return myUserDetailsService;
+	}
+	
+	@Bean
+	public JwtRequestFilter jwtRequestFilter() {
+		JwtRequestFilter jwtRequestFilter = new JwtRequestFilter();
+		return jwtRequestFilter;
+	}
 }
